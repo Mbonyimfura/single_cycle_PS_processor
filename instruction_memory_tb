@@ -1,0 +1,28 @@
+module InstructionMemory_tb;
+
+  reg [31:0] address;
+  wire [31:0] instruction;
+
+  // Instantiate the instruction memory module
+  InstructionMemory uut (
+    .address(address),
+    .instruction(instruction)
+  );
+
+  // Test scenario
+  initial begin
+    // Read instruction at address 0
+    address = 32'h0;
+    #10;
+
+    // Read instruction at address 1
+    address = 32'h4;
+    #10;
+
+  
+
+    $finish;
+  end
+
+endmodule
+
